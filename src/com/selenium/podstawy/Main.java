@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hej selenium");
 
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\kpopiela\\IdeaProjects\\selenium-kurs\\resources\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\kpopiela\\IdeaProjects\\selenium-kurs2\\resources\\geckodriver.exe");
         // Uruchomienie silnika przeglądarki
         WebDriver driver = new FirefoxDriver();
 
