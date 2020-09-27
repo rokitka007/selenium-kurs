@@ -23,6 +23,9 @@ public class BookingSite {
     @FindBy(className = "sb-searchbox__button")
     WebElement searchButton;
 
+    @FindBy(xpath = "//a[@data-ga-track='click|Product Expansion|cars|rentalcars (index)']")
+    WebElement searchLink;
+
     @BeforeTest
     public void setup() {
 //        DesiredCapabilities caps = new DesiredCapabilities();
@@ -55,6 +58,12 @@ public class BookingSite {
         Assert.assertTrue(newUrl.contains("searchresults"));
     }
 
+    @Test
+    public void rentCar(){
+        searchLink.click();
+        String newUrl = driver.getCurrentUrl();
+        Assert.assertTrue(newUrl.contains("cars"));
+    }
 
 
 }
