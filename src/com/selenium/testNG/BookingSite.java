@@ -1,6 +1,5 @@
 package com.selenium.testNG;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -28,7 +27,7 @@ public class BookingSite {
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\rychu\\IdeaProjects\\selenium-kurs\\resources\\geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);;
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);;
         driver.get("https://www.booking.com/");
         PageFactory.initElements(driver, this);
     }
@@ -48,7 +47,7 @@ public class BookingSite {
     }
 
     @Test
-    public void clickCarRentals() {
+    public void rentACar() {
         rentCarLink.click();
         String newUrl = driver.getCurrentUrl();
         Assert.assertTrue(newUrl.contains("cars"));
