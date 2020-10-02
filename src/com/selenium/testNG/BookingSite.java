@@ -15,7 +15,10 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class BookingSite {
+  //Atrybuty klasy (driver, destinationInput
     WebDriver driver;
+
+
     @FindBy(className = "sb-destination__input")
     WebElement destinationInput;
 
